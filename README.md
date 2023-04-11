@@ -1,8 +1,21 @@
-# Weather forecast
+# Получение погоды
 
-- Shows a weather forecast for the next 3 days in the console.
-- Current version includes the following locations: London, SVO, Cherepovets.
+Этот скрипт позволяет получить текущую погоду для заданных местоположений с помощью сервиса wttr.in. Скрипт использует библиотеку requests для отправки HTTP-запросов к API wttr.in.
 
-### Prerequisites:
+### Установка
 
-Python3 should already be installed.
+Скрипт не требует дополнительной установки зависимостей, кроме стандартной библиотеки requests, которая обычно уже установлена в Python.
+
+### Использование
+
+Запустите скрипт main.py:
+
+```ruby
+$ python main.py
+```
+
+Результаты будут выведены в консоль.
+
+### Ошибки
+
+Если запрос не удалось выполнить, скрипт выведет сообщение об ошибке, указывающее на возможную причину неудачи.
