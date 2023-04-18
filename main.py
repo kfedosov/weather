@@ -1,9 +1,7 @@
 import requests
 
 URL_TEMPLATE = 'http://wttr.in/{}'
-PAYLOAD = {'lang': 'ru', 'nMTq' : None}
-PAYLOAD = '&'.join([key if value is None else f"{key}={value}" for key,
-                                                    value in PAYLOAD.items()])
+PAYLOAD = {'lang': 'ru', 'nMTq': ''}
 
 
 def get_weather(location):
@@ -17,8 +15,12 @@ def get_weather(location):
         return response.text
 
 
-if __name__ == "__main__":
-    locations = ['Лондон', 'аэропорт Шереметьево', 'Череповец']
+def main():
+    locations = ['Лондон', 'SVO', 'Череповец']
     for location in locations:
         weather = get_weather(location)
         print(weather)
+
+
+if __name__ == "__main__":
+    main()
